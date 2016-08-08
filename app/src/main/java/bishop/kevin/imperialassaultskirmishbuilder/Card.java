@@ -5,10 +5,11 @@ package bishop.kevin.imperialassaultskirmishbuilder;
  */
 public class Card {
     // Basic information
+    private int id;
     private String name;
     private String title;
     private String affiliation;
-    private boolean unique;
+    private String unique;
     private String training; // Could be a boolean since options are elite/regular
     private String size;
     private int groupSize;
@@ -32,10 +33,11 @@ public class Card {
     public Card(){
     }
 
-    public Card(String name, String title, String affiliation, boolean unique, String training,
+    public Card(int id, String name, String title, String affiliation, String unique, String training,
                 String size, int groupSize, int costMajor, int costMinor, String traits, int health,
                 int speed, String defense, String attackType, String attackDice,
                 String shortAbilities, String longAbilities) {
+        this.id = id;
         this.name = name;
         this.title = title;
         this.affiliation = affiliation;
@@ -59,6 +61,10 @@ public class Card {
     }
 
     // Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -71,7 +77,7 @@ public class Card {
         this.affiliation = affiliation;
     }
 
-    public void setUnique(boolean unique) {
+    public void setUnique(String unique) {
         this.unique = unique;
     }
 
@@ -128,6 +134,10 @@ public class Card {
     }
 
     // Getters
+    public int getId() {
+        return this.id;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -140,7 +150,7 @@ public class Card {
         return this.affiliation;
     }
 
-    public boolean isUnique() {
+    public String getUnique() {
         return this.unique;
     }
 
