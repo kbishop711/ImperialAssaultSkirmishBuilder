@@ -1,16 +1,13 @@
 package bishop.kevin.imperialassaultskirmishbuilder;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class CardDisplay extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, CardDisplay.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_card_display);
     }
 }
