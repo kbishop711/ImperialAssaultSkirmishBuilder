@@ -58,6 +58,144 @@ public class Card {
         this.longAbilities = longAbilities;
     }
 
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAffiliation(String affiliation) {
+        this.affiliation = affiliation;
+    }
+
+    public void setUnique(boolean unique) {
+        this.unique = unique;
+    }
+
+    public void setTraining(String training) {
+        this.training = training;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public void setGroupSize(int groupSize) {
+        this.groupSize = groupSize;
+    }
+
+    public void setCostMajor(int costMajor) {
+        this.costMajor = costMajor;
+    }
+
+    public void setCostMinor(int costMinor) {
+        this.costMinor = costMinor;
+    }
+
+    public void setTraits(String traits) {
+        this.traits = traits;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setDefense(String defense) {
+        this.defense = defense;
+    }
+
+    public void setAttackType(String attackType) {
+        this.attackType = attackType;
+    }
+
+    public void setAttackDice(String attackDice) {
+        this.attackDice = attackDice;
+    }
+
+    public void setShortAbilities(String shortAbilities) {
+        this.shortAbilities = shortAbilities;
+    }
+
+    public void setLongAbilities(String longAbilities) {
+        this.longAbilities = longAbilities;
+    }
+
+    // Getters
+    public String getName() {
+        return this.name;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getAffiliation() {
+        return this.affiliation;
+    }
+
+    public boolean isUnique() {
+        return this.unique;
+    }
+
+    public String getTraining() {
+        return this.training;
+    }
+
+    public String getSize() {
+        return this.size;
+    }
+
+    public int getGroupSize() {
+        return this.groupSize;
+    }
+
+    public int getCostMajor() {
+        return this.costMajor;
+    }
+
+    public int getCostMinor() {
+        return this.costMinor;
+    }
+
+    public String getTraits() {
+        return this.traits;
+    }
+
+    public int getHealth() {
+        return this.health;
+    }
+
+    public int getSpeed() {
+        return this.speed;
+    }
+
+    public String getDefense() {
+        return this.defense;
+    }
+
+    public String getAttackType() {
+        return this.attackType;
+    }
+
+    public String getAttackDice() {
+        return this.attackDice;
+    }
+
+    public String getShortAbilities() {
+        return this.shortAbilities;
+    }
+
+    public String getLongAbilities() {
+        return this.longAbilities;
+    }
+
 
 
 }
