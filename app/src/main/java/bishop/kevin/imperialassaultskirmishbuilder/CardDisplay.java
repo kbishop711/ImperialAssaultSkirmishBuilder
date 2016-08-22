@@ -3,10 +3,15 @@ package bishop.kevin.imperialassaultskirmishbuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.List;
 
 public class CardDisplay extends AppCompatActivity {
+
+    private boolean visible = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +39,35 @@ public class CardDisplay extends AppCompatActivity {
                     + card.getTitle();
             Log.d("Card::", log);
         }
+
+        // Display an individual card's stats in text from the db
+        TextView name = (TextView) findViewById(R.id.name_title_unique_faction);
+        Card card = db.getCard(1);
+        name.setText(card.getName() + " - " + card.getTitle() + " - " + card.getUnique() + " - " +
+                card.getAffiliation());
+
+        TextView traits = (TextView) findViewById(R.id.training_traits);
+        traits.setText(card.getTraining() + " - " + card.getTraits());
+
+        TextView costs = (TextView) findViewById(R.id.cost_cost_group);
+        costs.setText(card.getCostMajor() + " / " + card.getCostMinor() + " ( Group Size " +
+                card.getGroupSize() + " )");
+
+        TextView stats = (TextView) findViewById(R.id.numerical_stats);
+        stats.setText("Health: " + card.getHealth() + ", Speed: " + card.getSpeed() + ", Defense: "
+                + card.getDefense() + ", Attack: " + card.getAttackType() + card.getAttackDice());
+
+        TextView shortAbilities = (TextView) findViewById(R.id.short_abilites);
+        shortAbilities.setText(card.getShortAbilities());
+
+        TextView longAbilities = (TextView) findViewById(R.id.long_abilites);
+        longAbilities.setText(card.getLongAbilities());
+    }
+
+    public void toggleText(View view) {
+        ImageButton card = (ImageButton) findViewById(R.id.card_picture);
+        visible = !visible;
+        if(visible) card.setVisibility(View.VISIBLE);
+        else card.setVisibility(View.INVISIBLE);
     }
 }

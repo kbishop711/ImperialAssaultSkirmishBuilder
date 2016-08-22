@@ -8,9 +8,58 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="bishop.kevin.imperialassaultskirmishbuilder.CardDisplay">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ig_88" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="1"
+        android:background="@drawable/customborder"
+        android:onClick="toggleText">
+        <TableRow>
+            <TextView android:id="@+id/name_title_unique_faction"
+                android:layout_width="wrap_content"
+                android:text="Name - Title - Unique? - Faction"
+                android:padding="3dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/training_traits"
+                android:text="Training - Traits"
+                android:padding="3dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/cost_cost_group"
+                android:text="Cost Major / Cost Minor (Group Size: 0)"
+                android:padding="3dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@+id/numerical_stats"
+                android:layout_width="wrap_content"
+                android:text="Health: 0, Speed: 0, Defense: {white}, Attack: {Ranged}{Blue}{Green}{Yellow}"
+                android:padding="3dp"/>
+        </TableRow>
+        <TableRow
+            android:background="@drawable/customborder">
+            <TextView android:id="@+id/short_abilites"
+                android:text="Short Ability 1; Short Ability 2; Short Ability 3; Short Ability 4;"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:padding="3dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            android:background="@drawable/customborder">
+            <TextView android:id="@+id/long_abilites"
+                android:text="THIS IS WHERE ALL OF THE LONG ABILITIES WILL GO"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:padding="3dp"/>
+        </TableRow>
+    </TableLayout>
+    <ImageButton android:id="@+id/card_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/luke_skywalker_1"
+        android:onClick="toggleText"/>
 
 </RelativeLayout>
